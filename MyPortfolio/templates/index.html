@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>Portfolio</title>
+            <!-- fonts -->
+            <link rel="preconnect" href="https://fonts.googleapis.com">
+            <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+            <link href="https://fonts.googleapis.com/css2?family=Teko:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+            <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
+            <link href="https://fonts.googleapis.com/css2?family=The+Nautigal:wght@400;700&display=swap" rel="stylesheet">
+            <!-- font awesom  -->
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+            <!-- bootstrapt -->
+            <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+            <!-- custom style  -->
+            <link rel="stylesheet" href="/static/style/demo.css">
+        </head>
+        <body>
+            <div class="container-fluid"> 
+            <header>
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="header">
+                                <div class="logo">
+                                    <img class="img-fluid" src="/static/img/logo.png" alt="portfolio logo">
+                                </div>
+                                <nav class="nav justify-content-end">
+                                    <ul class="nav">
+                                        <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
+                                        <li class="nav-item"><a class="nav-link" href="#about-me">About</a></li>
+                                        <li class="nav-item"><a class="nav-link" href="#service">Skills</a></li>
+                                        <li class="nav-item"><a class="nav-link" href="#project">Projects</a></li>
+                                        <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+                                    </ul>
+                                </nav>
+                                <i class="fas fa-bars nav-toggle" id="navToggle"></i>
+                                <!-- <div class="sidebar"> -->
+                                    <div class="side-nav" id="side-nav">
+                                        <i class="fa fa-close" id="closeNav"></i>
+                                        <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
+                                        <li class="nav-item"><a class="nav-link" href="#about-me">About</a></li>
+                                        <li class="nav-item"><a class="nav-link" href="#service">Skills</a></li>
+                                        <li class="nav-item"><a class="nav-link" href="#project">Projects</a></li>
+                                        <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+                                    </div>
+                                <!-- </div> -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </header>
+            </div>
+            <section class="hero" id="home">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-12 col-md-6">
+                            
+                            <h2 id="hero-h2">{{ hero.smHead }}</h2>
+                            <h1 id="hero-h1">{{ hero.Head }}</h1>
+                        </div>
+                        <div class="col-12 col-md-6">
+                            <div class="hero-img">
+                                <img class="img-fluid" id="hero-img" src="/media/{{ hero.Head_img }}" alt="hero-img">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <div class="sec-1">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-12 col-md-9">
+                            <a href="https://wa.me/{{ hero.Head_link1 }}" class="btn">Hire Me <i class="fa-solid fa-rocket"> </i></a>
+                            <p class="p" id="typeText">
+                                {{ hero.Head_Desc }}
+                            </p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <ul class="hero-icons">
+                            <li class="icon"><a href="https://wa.me/{{ hero.Head_link1 }}"><i class="fa-brands fa-square-whatsapp"></i></a></li>
+                            <li class="icon"><a href="{{ hero.Head_link2 }}"><i class="fa-brands fa-facebook"></i></a></li>
+                            <li class="icon"><a href="{{ hero.Head_link3 }}"><i class="fa-brands fa-instagram"></i></a></li>
+                            <li class="icon"><a href="{{ hero.Head_link4 }}"><i class="fa-brands fa-youtube"></i></a></li>
+                            <li class="icon"><a href="{{ hero.Head_link5 }}"><i class="fa-brands fa-twitter"></i></a></li>
+                            <li class="nav-link"><i>{{ hero.Mail }}</i></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <section class="sec-2">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="skills">
+                                <ul>
+                                    <li>HTML</li>
+                                    <li>CSS</li>
+                                    <li>bootstrap</li>
+                                    <li>SCSS</li>
+                                    <li>PHP</li>
+                                    <li>Python</li>
+                                    <li>GSAP</li>
+                                    <li>JavaScript</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="about" id="about-me">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-12 col-md-6 d-flex justify-content-center align-items-center mt-3">
+                            <div class="picture">
+                                <img class="img-fluid about-img" id="about-img" src="/media/{{ about.about_img }}" alt="Amir Developer">
+                            </div>
+                        </div>
+                        <div class="col-12 col-md-6">
+                            <div class="details">
+                                <h2>
+                                    <i class="fa-solid fa-user"></i>
+                                    {{ about.about_head }}
+                                </h2>
+                                <p class="ms-4">
+                                    {{ about.about_text }}
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="services" id="service">
+                    <img class="mouse" src="/media/{{ about.about_img }}" alt="mouse">
+                <div class="container">
+                    <div class="row">
+                        <h2><i class="fa-brands fa-servicestack"></i> Services</h2>
+                        {% for sr in service %}
+                        <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+                            <div class="card service-card">
+                                <img src="/media/{{ sr.Card_img }}" alt="developer-logo">
+                                <h2 class="text-center">{{ sr.Card_hd }}</h2>                    
+                            </div>
+                        </div>   
+                        {% endfor %}
+                    </div>
+                </div>
+            </section>
+            <div class="sec-3">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-12">
+                            <h2><i class="fa-solid fa-graduation-cap"></i> EDUCATION</h2>
+                            <div class="row">
+                                {% for edu in education %}
+                                <div class="col-12 col-md-6">
+                                    <div class="certif">
+                                        <div class="name">
+                                            <b>{{ edu.Course }}</b>
+                                            <p><i class="fa-solid fa-building-columns"></i>{{ edu.Department }}</p>
+                                        </div>
+                                        <div class="year"><b>{{ edu.Year }}</b></div>
+                                    </div>
+                                </div>
+                                {% endfor %}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <section class="languages">
+                <div class="container">
+                    <div class="row">
+                        {% for lng in language %}
+                        <div class="col-6 col-sm-4 col-md-3 col-lg-2">
+                            <div class="card">
+                                <img src="/media/{{ lng.language_img }}" alt="" class="card-img">
+                            </div>
+                        </div>
+                        {% endfor %}
+                    </div>
+                </div>
+            </section>
+            <section class="projects" id="project">
+                <div class="container">
+                    <div class="row">
+                        {% for pr in project %}
+                        <div class="col-12 col-md-6 col-lg-4">
+                            <div class="card rounded-3" id="project-card">
+                                <div class="card-img m-0">
+                                    <img class="img-fluid rounded-3" src="/media/{{ pr.pro_img }}" alt="hassan graphics">
+                                </div>
+                                <div class="card-detail">
+                                    <p class="text-justify mx-1">{{ pr.pro_detail }}</p>    
+                                </div>
+                                <div class="card-footer"><a href="{{ pr.pro_link }}">Visit this site...</a></div>
+                            </div>
+                        </div>
+                        {% endfor %}
+                    </div>
+                </div>
+            </section>
+            <section class="testimonial">
+                <div class="container">
+                    <div class="row justify-content-center">
+                        <div class="col-12 col-md-9 col-lg-6">
+                            <p>What Others Say</p>
+                            <h2>Testimonials</h2>
+                            {% for tm in testim %}
+                            <div class="card">
+                                <img class="img-fluid" src="/media/{{ tm.test_img }}" alt="feedback">
+                                <p>{{ tm.test_text }}</p>
+                            </div>
+                            {% endfor %}
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- contact me  -->
+             <div class="container py-5">
+            <div class="row justify-content-center align-items-center">
+                <div class="col-12 col-md-6 d-flex justify-content-center">
+                    <div class="card phone-card" id="contact">
+                        <div class="cam-back">
+                            <div class="cam"></div>
+                        </div>
+                        <form>
+                            <h2 class="text-center mb-4">Contact Us</h2>
+                            <div class="input-gp">
+                                <label>Your Name</label>
+                                <input type="text" placeholder="Enter your name">
+                            </div>
+                            <div class="input-gp">
+                                <label>Email</label>
+                                <input type="email" placeholder="Enter your email">
+                            </div>
+                            <div class="input-gp">
+                                <label>Message</label>
+                                <textarea rows="4" placeholder="Type your message"></textarea>
+                            </div>
+                            <button class="sub-btn">Send Message</button>
+                        </form>
+                        <div class="ft-btns"></div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6 mt-4 mt-md-0 text-light con-sider">
+                    <h3>Get in Touch</h3>
+                    <p>
+                        We’d love to hear from you. Send us a message and we’ll respond
+                        as soon as possible with professional support and guidance.
+                    </p>
+                    <div class="row">
+                        <div class="col-12 mt-2">
+                            <div class="card">
+                                <div class="icon">
+                                    <i class="fa-solid fa-envelope"></i>
+                                </div>
+                                <div class="detail">
+                                    <span>Email</span>
+                                    <span>{{ touch.t_email }}</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 mt-2">
+                            <div class="card">
+                                <div class="icon">
+                                    <i class="fa-solid fa-phone"></i>
+                                </div>
+                                <div class="detail">
+                                    <span>Contact</span>
+                                    <span>{{ touch.t_cnt }}</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 mt-2">
+                            <div class="card">
+                                <div class="icon">
+                                    <i class="fa-solid fa-location-dot"></i>
+                                </div>
+                                <div class="detail">
+                                    <span>Address</span>
+                                    <span>{{ touch.t_loc }}</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/gsap.min.js" integrity="sha512-NcZdtrT77bJr4STcmsGAESr06BYGE8woZdSdEgqnpyqac7sugNO+Tr4bGwGF3MsnEkGKhU2KL2xh6Ec+BqsaHA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/ScrollTrigger.min.js" integrity="sha512-P2IDYZfqSwjcSjX0BKeNhwRUH8zRPGlgcWl5n6gBLzdi4Y5/0O4zaXrtO4K9TZK6Hn1BenYpKowuCavNandERg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+            <script src="/static/js/animation.js"></script>
+    </body>
+</html>
